@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Hi ha una manera ideal d'estudiar?</title>
 
   <style>
@@ -28,12 +27,19 @@
 
     .targeta {
       width: 100%;
-      max-width: 750px;
+      max-width: 760px;
       background: white;
       border-radius: 22px;
-      padding: 55px 45px;
-      text-align: center;
+      padding: 48px 42px;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .centrat {
+      text-align: center;
+    }
+
+    .amagat {
+      display: none;
     }
 
     .etiqueta {
@@ -55,6 +61,16 @@
 
     h1 span {
       color: #4c91a8;
+    }
+
+    h2 {
+      color: #20343d;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #356f83;
+      margin-bottom: 8px;
     }
 
     .subtitol {
@@ -79,9 +95,9 @@
       border: none;
       background: #4c91a8;
       color: white;
-      padding: 16px 34px;
+      padding: 15px 28px;
       border-radius: 12px;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       transition: 0.2s;
@@ -98,9 +114,135 @@
       color: #8b989e;
     }
 
+    .progres-text {
+      font-size: 14px;
+      color: #718087;
+      margin-bottom: 8px;
+    }
+
+    .barra {
+      width: 100%;
+      height: 10px;
+      background: #e9f0f3;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 35px;
+    }
+
+    .barra-interior {
+      height: 100%;
+      width: 0%;
+      background: #4c91a8;
+      transition: width 0.3s;
+    }
+
+    .pregunta {
+      font-size: 23px;
+      line-height: 1.45;
+      margin-bottom: 28px;
+      color: #273b44;
+    }
+
+    .respostes {
+      display: grid;
+      gap: 12px;
+    }
+
+    .resposta {
+      width: 100%;
+      text-align: left;
+      background: #f5f9fa;
+      color: #33474f;
+      border: 2px solid transparent;
+      padding: 16px 18px;
+      font-weight: normal;
+    }
+
+    .resposta:hover {
+      background: #e9f4f7;
+      border-color: #8dbac9;
+      transform: none;
+    }
+
+    .resultat-principal {
+      background: #eef7fa;
+      border-radius: 16px;
+      padding: 22px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .resultat-principal strong {
+      color: #39788e;
+      font-size: 22px;
+    }
+
+    .bloc-puntuacio {
+      margin: 18px 0;
+    }
+
+    .fila-puntuacio {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .barra-resultat {
+      height: 12px;
+      background: #e7eef1;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .barra-resultat div {
+      height: 100%;
+      background: #4c91a8;
+      border-radius: 10px;
+    }
+
+    .recomanacions {
+      background: #f8fafb;
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 25px;
+    }
+
+    .recomanacions ul {
+      line-height: 1.7;
+      padding-left: 22px;
+    }
+
+    .avis {
+      margin-top: 22px;
+      padding: 16px;
+      border-left: 4px solid #d6a84b;
+      background: #fff9ec;
+      color: #5d5646;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .botons-final {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .secundari {
+      background: #dfeaed;
+      color: #36545f;
+    }
+
+    .secundari:hover {
+      background: #cfdee2;
+    }
+
     @media (max-width: 600px) {
       .targeta {
-        padding: 40px 25px;
+        padding: 35px 22px;
       }
 
       h1 {
@@ -109,6 +251,10 @@
 
       .subtitol {
         font-size: 17px;
+      }
+
+      .pregunta {
+        font-size: 20px;
       }
     }
   </style>
@@ -120,42 +266,455 @@
 
     <section class="targeta">
 
-      <div class="etiqueta">
-        Treball de Recerca
+      <!-- INICI -->
+      <div id="inici" class="centrat">
+
+        <div class="etiqueta">Treball de Recerca</div>
+
+        <h1>
+          Hi ha una manera ideal <span>d'estudiar?</span>
+        </h1>
+
+        <p class="subtitol">
+          Descobreix les teves preferències a l'hora d'estudiar
+          i coneix diferents estratègies que et poden ajudar
+          a millorar el teu aprenentatge.
+        </p>
+
+        <div class="info">
+          Respon un qüestionari breu sobre la teva manera d'estudiar.
+          Al final obtindràs un resultat orientatiu i diferents
+          recomanacions que podràs aplicar al teu estudi.
+        </div>
+
+        <button onclick="comencarTest()">
+          Comença el test →
+        </button>
+
+        <p class="peu">
+          Qüestionari orientatiu · Web-app creada com a part d'un Treball de Recerca
+        </p>
+
       </div>
 
-      <h1>
-        Hi ha una manera ideal <span>d'estudiar?</span>
-      </h1>
 
-      <p class="subtitol">
-        Descobreix les teves preferències a l'hora d'estudiar
-        i coneix diferents estratègies que et poden ajudar
-        a millorar el teu aprenentatge.
-      </p>
+      <!-- TEST -->
+      <div id="test" class="amagat">
 
-      <div class="info">
-        Respon un qüestionari breu sobre la teva manera d'estudiar.
-        Al final obtindràs un resultat orientatiu i diferents
-        recomanacions que podràs aplicar al teu estudi.
+        <div class="progres-text" id="progresText"></div>
+
+        <div class="barra">
+          <div class="barra-interior" id="barraProgres"></div>
+        </div>
+
+        <h2 class="pregunta" id="textPregunta"></h2>
+
+        <div class="respostes">
+          <button class="resposta" onclick="respondre(1)">1 · Mai</button>
+          <button class="resposta" onclick="respondre(2)">2 · Poques vegades</button>
+          <button class="resposta" onclick="respondre(3)">3 · A vegades</button>
+          <button class="resposta" onclick="respondre(4)">4 · Sovint</button>
+          <button class="resposta" onclick="respondre(5)">5 · Sempre</button>
+        </div>
+
       </div>
 
-      <button onclick="comencarTest()">
-        Comença el test →
-      </button>
 
-      <p class="peu">
-        Qüestionari orientatiu · Web-app creada com a part d'un Treball de Recerca
-      </p>
+      <!-- RESULTATS -->
+      <div id="resultats" class="amagat">
+
+        <div class="centrat">
+          <div class="etiqueta">El teu resultat</div>
+          <h2>Resultats del qüestionari</h2>
+        </div>
+
+        <div id="resultatPrincipal" class="resultat-principal"></div>
+
+        <div class="bloc-puntuacio">
+          <div class="fila-puntuacio">
+            <span>Preferència visual</span>
+            <strong id="textVisual"></strong>
+          </div>
+          <div class="barra-resultat">
+            <div id="barraVisual"></div>
+          </div>
+        </div>
+
+        <div class="bloc-puntuacio">
+          <div class="fila-puntuacio">
+            <span>Preferència verbal</span>
+            <strong id="textVerbal"></strong>
+          </div>
+          <div class="barra-resultat">
+            <div id="barraVerbal"></div>
+          </div>
+        </div>
+
+        <div class="bloc-puntuacio">
+          <div class="fila-puntuacio">
+            <span>Preferència pràctica</span>
+            <strong id="textPractica"></strong>
+          </div>
+          <div class="barra-resultat">
+            <div id="barraPractica"></div>
+          </div>
+        </div>
+
+        <div class="recomanacions">
+          <h3>Estratègies que pots provar</h3>
+          <div id="recomanacionsPerfil"></div>
+        </div>
+
+        <div class="recomanacions">
+          <h3>Estratègies recomanades per millorar l'estudi</h3>
+          <div id="recomanacionsHabits"></div>
+        </div>
+
+        <div class="avis">
+          Aquest qüestionari té una funció orientativa. Les puntuacions no
+          determinen un estil d'aprenentatge fix ni indiquen que una persona
+          només hagi d'estudiar d'una determinada manera. Les tècniques més
+          adequades també depenen del contingut, l'objectiu i la situació d'estudi.
+        </div>
+
+        <div class="botons-final">
+          <button onclick="reiniciarTest()">Torna a fer el test</button>
+          <button class="secundari" onclick="tornarInici()">Torna a l'inici</button>
+        </div>
+
+      </div>
 
     </section>
 
   </main>
 
+
   <script>
+
+    const preguntes = [
+      {
+        text: "Quan estudio, m'ajuda organitzar la informació en esquemes, taules o mapes conceptuals.",
+        tipus: "visual"
+      },
+      {
+        text: "Els gràfics, dibuixos o representacions visuals m'ajuden a comprendre continguts difícils.",
+        tipus: "visual"
+      },
+      {
+        text: "Quan intento recordar uns apunts, em resulta útil pensar en com estava organitzada visualment la informació.",
+        tipus: "visual"
+      },
+      {
+        text: "Utilitzo colors, fletxes o altres elements visuals per relacionar conceptes.",
+        tipus: "visual"
+      },
+      {
+        text: "Explicar amb les meves pròpies paraules allò que estudio m'ajuda a entendre-ho.",
+        tipus: "verbal"
+      },
+      {
+        text: "Em resulta útil comentar amb una altra persona els continguts que estic estudiant.",
+        tipus: "verbal"
+      },
+      {
+        text: "Repetir o explicar una idea en veu alta m'ajuda a recordar-la.",
+        tipus: "verbal"
+      },
+      {
+        text: "Després d'estudiar un tema, intento explicar-lo sense mirar els apunts.",
+        tipus: "verbal"
+      },
+      {
+        text: "Entenc millor un contingut quan puc aplicar-lo en exercicis o problemes.",
+        tipus: "practica"
+      },
+      {
+        text: "Els exemples concrets m'ajuden a comprendre millor la teoria.",
+        tipus: "practica"
+      },
+      {
+        text: "Quan aprenc alguna cosa nova, intento relacionar-la amb situacions reals.",
+        tipus: "practica"
+      },
+      {
+        text: "Prefereixo practicar un procediment abans que limitar-me a llegir com es fa.",
+        tipus: "practica"
+      },
+      {
+        text: "Em faig preguntes o intento recordar la informació sense mirar els apunts.",
+        tipus: "recuperacio"
+      },
+      {
+        text: "Acostumo a repartir l'estudi d'un examen entre diversos dies.",
+        tipus: "distribucio"
+      },
+      {
+        text: "Quan estudio, intento relacionar la informació nova amb coses que ja sé.",
+        tipus: "elaboracio"
+      }
+    ];
+
+    let preguntaActual = 0;
+
+    let puntuacions = {
+      visual: 0,
+      verbal: 0,
+      practica: 0
+    };
+
+    let habits = {
+      recuperacio: 0,
+      distribucio: 0,
+      elaboracio: 0
+    };
+
+
     function comencarTest() {
-      alert("Molt bé! El test estarà disponible en el següent pas.");
+      document.getElementById("inici").classList.add("amagat");
+      document.getElementById("resultats").classList.add("amagat");
+      document.getElementById("test").classList.remove("amagat");
+
+      preguntaActual = 0;
+
+      puntuacions = {
+        visual: 0,
+        verbal: 0,
+        practica: 0
+      };
+
+      habits = {
+        recuperacio: 0,
+        distribucio: 0,
+        elaboracio: 0
+      };
+
+      mostrarPregunta();
     }
+
+
+    function mostrarPregunta() {
+      const pregunta = preguntes[preguntaActual];
+
+      document.getElementById("textPregunta").textContent = pregunta.text;
+
+      document.getElementById("progresText").textContent =
+        "Pregunta " + (preguntaActual + 1) + " de " + preguntes.length;
+
+      const percentatge =
+        ((preguntaActual + 1) / preguntes.length) * 100;
+
+      document.getElementById("barraProgres").style.width =
+        percentatge + "%";
+    }
+
+
+    function respondre(valor) {
+      const tipus = preguntes[preguntaActual].tipus;
+
+      if (
+        tipus === "visual" ||
+        tipus === "verbal" ||
+        tipus === "practica"
+      ) {
+        puntuacions[tipus] += valor;
+      } else {
+        habits[tipus] = valor;
+      }
+
+      preguntaActual++;
+
+      if (preguntaActual < preguntes.length) {
+        mostrarPregunta();
+      } else {
+        mostrarResultats();
+      }
+    }
+
+
+    function mostrarResultats() {
+      document.getElementById("test").classList.add("amagat");
+      document.getElementById("resultats").classList.remove("amagat");
+
+      const visual = puntuacions.visual;
+      const verbal = puntuacions.verbal;
+      const practica = puntuacions.practica;
+
+      document.getElementById("textVisual").textContent = visual + "/20";
+      document.getElementById("textVerbal").textContent = verbal + "/20";
+      document.getElementById("textPractica").textContent = practica + "/20";
+
+      document.getElementById("barraVisual").style.width =
+        (visual / 20 * 100) + "%";
+
+      document.getElementById("barraVerbal").style.width =
+        (verbal / 20 * 100) + "%";
+
+      document.getElementById("barraPractica").style.width =
+        (practica / 20 * 100) + "%";
+
+
+      const ordre = [
+        { nom: "visual", valor: visual },
+        { nom: "verbal", valor: verbal },
+        { nom: "practica", valor: practica }
+      ].sort((a, b) => b.valor - a.valor);
+
+      const primera = ordre[0];
+      const segona = ordre[1];
+
+      let perfil = "";
+      let explicacio = "";
+
+      if (primera.valor - segona.valor <= 2) {
+        perfil = nomPerfilMixt(primera.nom, segona.nom);
+        explicacio = explicacioMixta(primera.nom, segona.nom);
+      } else {
+        perfil = nomPerfil(primera.nom);
+        explicacio = explicacioPerfil(primera.nom);
+      }
+
+      document.getElementById("resultatPrincipal").innerHTML =
+        "<p>En les teves respostes destaca:</p>" +
+        "<strong>" + perfil + "</strong>" +
+        "<p>" + explicacio + "</p>";
+
+      mostrarRecomanacionsPerfil(primera.nom, segona.nom, primera.valor - segona.valor);
+      mostrarRecomanacionsHabits();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    function nomPerfil(tipus) {
+      if (tipus === "visual") return "Preferència visual";
+      if (tipus === "verbal") return "Preferència verbal";
+      return "Preferència pràctica";
+    }
+
+
+    function nomPerfilMixt(a, b) {
+      const noms = {
+        visual: "visual",
+        verbal: "verbal",
+        practica: "pràctica"
+      };
+
+      return "Preferència mixta " + noms[a] + "-" + noms[b];
+    }
+
+
+    function explicacioPerfil(tipus) {
+      if (tipus === "visual") {
+        return "Mostres una tendència elevada a organitzar i comprendre la informació mitjançant recursos visuals.";
+      }
+
+      if (tipus === "verbal") {
+        return "Mostres una tendència elevada a treballar la informació explicant-la, verbalitzant-la o comentant-la.";
+      }
+
+      return "Mostres una tendència elevada a comprendre la informació mitjançant l'aplicació, els exemples i la pràctica.";
+    }
+
+
+    function explicacioMixta(a, b) {
+      return "Les dues puntuacions més altes són molt semblants. Això indica que presentes preferències diverses i que pots combinar estratègies de totes dues categories.";
+    }
+
+
+    function mostrarRecomanacionsPerfil(primer, segon, diferencia) {
+
+      const recomanacions = {
+
+        visual: [
+          "Organitza les idees principals en esquemes o mapes conceptuals.",
+          "Utilitza taules comparatives per relacionar conceptes.",
+          "Transforma informació complexa en gràfics o diagrames quan sigui possible."
+        ],
+
+        verbal: [
+          "Explica els continguts amb les teves pròpies paraules.",
+          "Formula preguntes sobre el tema i respon-les sense mirar els apunts.",
+          "Prova d'explicar el tema a una altra persona."
+        ],
+
+        practica: [
+          "Aplica la teoria mitjançant exercicis, problemes o casos concrets.",
+          "Crea exemples propis relacionats amb els continguts.",
+          "Practica procediments en lloc de limitar-te a rellegir-los."
+        ]
+      };
+
+      let llista = [...recomanacions[primer]];
+
+      if (diferencia <= 2) {
+        llista.push(...recomanacions[segon]);
+      }
+
+      document.getElementById("recomanacionsPerfil").innerHTML =
+        "<ul>" +
+        llista.map(item => "<li>" + item + "</li>").join("") +
+        "</ul>";
+    }
+
+
+    function mostrarRecomanacionsHabits() {
+
+      let recomanacions = [];
+
+      if (habits.recuperacio <= 2) {
+        recomanacions.push(
+          "<strong>Pràctica de recuperació:</strong> després d'estudiar, tanca els apunts i intenta recordar o explicar la informació sense mirar."
+        );
+      }
+
+      if (habits.distribucio <= 2) {
+        recomanacions.push(
+          "<strong>Pràctica distribuïda:</strong> prova de repartir l'estudi en diverses sessions i dies en lloc de concentrar-lo just abans de l'examen."
+        );
+      }
+
+      if (habits.elaboracio <= 2) {
+        recomanacions.push(
+          "<strong>Elaboració:</strong> intenta relacionar la informació nova amb conceptes que ja coneixes i buscar exemples propis."
+        );
+      }
+
+      if (recomanacions.length === 0) {
+        recomanacions.push(
+          "Les teves respostes indiquen que ja utilitzes sovint diverses estratègies actives. Continua combinant la recuperació de la informació, l'estudi distribuït i la relació entre idees."
+        );
+      }
+
+      document.getElementById("recomanacionsHabits").innerHTML =
+        "<ul>" +
+        recomanacions.map(item => "<li>" + item + "</li>").join("") +
+        "</ul>";
+    }
+
+
+    function reiniciarTest() {
+      comencarTest();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    function tornarInici() {
+      document.getElementById("resultats").classList.add("amagat");
+      document.getElementById("test").classList.add("amagat");
+      document.getElementById("inici").classList.remove("amagat");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
   </script>
 
 </body>
