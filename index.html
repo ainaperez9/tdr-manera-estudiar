@@ -13,8 +13,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f8fb;
-      color: #263238;
+      background: #fff7fb;
+      color: #4a3b44;
     }
 
     .pantalla {
@@ -23,15 +23,20 @@
       justify-content: center;
       align-items: center;
       padding: 30px 20px;
+      background: linear-gradient(135deg, #fff4f8, #fde7f0);
     }
 
     .targeta {
       width: 100%;
-      max-width: 760px;
+      max-width: 850px;
       background: white;
-      border-radius: 22px;
-      padding: 48px 42px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(150, 92, 120, 0.15);
+    }
+
+    .bloc {
+      padding: 42px 36px;
     }
 
     .centrat {
@@ -44,56 +49,52 @@
 
     .etiqueta {
       display: inline-block;
-      background: #e3f1f7;
-      color: #35758c;
+      background: #f8dce8;
+      color: #b04f7f;
       padding: 8px 16px;
       border-radius: 30px;
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      font-weight: bold;
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 40px;
       line-height: 1.15;
       margin: 0 0 18px;
-      color: #20343d;
+      color: #7c3058;
     }
 
     h1 span {
-      color: #4c91a8;
+      color: #d05d93;
     }
 
     h2 {
-      color: #20343d;
+      color: #7c3058;
       margin-top: 0;
     }
 
-    h3 {
-      color: #356f83;
-      margin-bottom: 8px;
-    }
-
     .subtitol {
-      font-size: 19px;
+      font-size: 18px;
       line-height: 1.6;
-      color: #5d6b72;
-      max-width: 600px;
-      margin: 0 auto 30px;
+      color: #6b5a63;
+      max-width: 640px;
+      margin: 0 auto 28px;
     }
 
     .info {
-      background: #f7fafb;
-      border-radius: 15px;
+      background: #fff3f8;
+      border-radius: 16px;
       padding: 18px;
       margin: 25px 0;
       font-size: 15px;
-      line-height: 1.5;
-      color: #59676d;
+      line-height: 1.6;
+      color: #6c5560;
     }
 
     button {
       border: none;
-      background: #4c91a8;
+      background: #d05d93;
       color: white;
       padding: 15px 28px;
       border-radius: 12px;
@@ -104,35 +105,66 @@
     }
 
     button:hover {
-      background: #39788e;
+      background: #b94c7f;
       transform: translateY(-2px);
     }
 
-    .peu {
-      margin-top: 35px;
-      font-size: 13px;
-      color: #8b989e;
+    .secundari {
+      background: #f4dce7;
+      color: #8b4568;
+    }
+
+    .secundari:hover {
+      background: #ecc8d8;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 340px;
+      background-image: linear-gradient(rgba(125, 48, 88, 0.55), rgba(125, 48, 88, 0.55)), url('fons-estudi.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #ffd6e8;
+    }
+
+    .hero .subtitol {
+      color: #fff3f8;
+      margin-bottom: 0;
     }
 
     .progres-text {
       font-size: 14px;
-      color: #718087;
+      color: #8b6677;
       margin-bottom: 8px;
     }
 
     .barra {
       width: 100%;
       height: 10px;
-      background: #e9f0f3;
+      background: #f4d9e4;
       border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .barra-interior {
       height: 100%;
       width: 0%;
-      background: #4c91a8;
+      background: #d05d93;
       transition: width 0.3s;
     }
 
@@ -140,7 +172,7 @@
       font-size: 23px;
       line-height: 1.45;
       margin-bottom: 28px;
-      color: #273b44;
+      color: #6f2f50;
     }
 
     .respostes {
@@ -151,30 +183,31 @@
     .resposta {
       width: 100%;
       text-align: left;
-      background: #f5f9fa;
-      color: #33474f;
+      background: #fff5f9;
+      color: #5b4650;
       border: 2px solid transparent;
       padding: 16px 18px;
       font-weight: normal;
     }
 
     .resposta:hover {
-      background: #e9f4f7;
-      border-color: #8dbac9;
+      background: #fde8f1;
+      border-color: #e5a9c5;
       transform: none;
     }
 
     .resultat-principal {
-      background: #eef7fa;
+      background: #fff1f7;
       border-radius: 16px;
-      padding: 22px;
+      padding: 24px;
       margin: 25px 0;
       text-align: center;
+      line-height: 1.6;
     }
 
     .resultat-principal strong {
-      color: #39788e;
-      font-size: 22px;
+      color: #b94c7f;
+      font-size: 24px;
     }
 
     .bloc-puntuacio {
@@ -190,37 +223,31 @@
 
     .barra-resultat {
       height: 12px;
-      background: #e7eef1;
+      background: #f5dfe8;
       border-radius: 10px;
       overflow: hidden;
     }
 
     .barra-resultat div {
       height: 100%;
-      background: #4c91a8;
+      background: #d05d93;
       border-radius: 10px;
     }
 
     .recomanacions {
-      background: #f8fafb;
+      background: #fff7fb;
       border-radius: 16px;
       padding: 22px;
       margin-top: 25px;
     }
 
     .recomanacions ul {
-      line-height: 1.7;
+      line-height: 1.8;
       padding-left: 22px;
     }
 
-    .avis {
-      margin-top: 22px;
-      padding: 16px;
-      border-left: 4px solid #d6a84b;
-      background: #fff9ec;
-      color: #5d5646;
-      line-height: 1.5;
-      font-size: 14px;
+    .recomanacions li {
+      margin-bottom: 10px;
     }
 
     .botons-final {
@@ -231,26 +258,30 @@
       margin-top: 28px;
     }
 
-    .secundari {
-      background: #dfeaed;
-      color: #36545f;
-    }
-
-    .secundari:hover {
-      background: #cfdee2;
+    .peu {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #9b7a88;
+      text-align: center;
+      line-height: 1.5;
     }
 
     @media (max-width: 600px) {
-      .targeta {
-        padding: 35px 22px;
+      .hero {
+        min-height: 290px;
+        padding: 30px 20px;
+      }
+
+      .bloc {
+        padding: 30px 22px;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 31px;
       }
 
       .subtitol {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       .pregunta {
@@ -261,41 +292,36 @@
 </head>
 
 <body>
-
   <main class="pantalla">
-
     <section class="targeta">
 
       <!-- INICI -->
-      <div id="inici" class="centrat">
-
-        <div class="etiqueta">Treball de Recerca</div>
-
-        <h1>
-          Hi ha una manera ideal <span>d'estudiar?</span>
-        </h1>
-
-        <p class="subtitol">
-          Descobreix com estudies i quines estratègies et poden ajudar a aprendre millor. Fes el test i troba noves maneres de millorar el teu estudi.
-        </p>
-
-        <div class="info">
-          Respon unes preguntes sobre com estudies i descobreix les teves preferències. Al final, trobaràs recomanacions i estratègies pensades per ajudar-te a estudiar d’una manera més eficaç
+      <div id="inici">
+        <div class="hero">
+          <div>
+            <div class="etiqueta">Treball de Recerca</div>
+            <h1>Descobreix el teu canal <span>de processament</span></h1>
+            <p class="subtitol">
+              Fes aquest qüestionari i descobreix si tendeixes a estudiar millor a través del canal visual, verbal o cinestèsic/pràctic.
+            </p>
+          </div>
         </div>
 
-        <button onclick="comencarTest()">
-          Començar el test →
-        </button>
+        <div class="bloc centrat">
+          <div class="info">
+            Respon unes preguntes sobre la teva manera d’estudiar. Al final, veuràs quin canal de processament predomina més en tu i trobaràs tècniques d’estudi que et poden ajudar.
+          </div>
 
-        
-        </p>
+          <button onclick="comencarTest()">Començar el test →</button>
 
+          <div class="peu">
+            Aquesta eina és orientativa i forma part del meu Treball de Recerca sobre la manera de processar la informació i les tècniques d’estudi.
+          </div>
+        </div>
       </div>
 
-
       <!-- TEST -->
-      <div id="test" class="amagat">
-
+      <div id="test" class="amagat bloc">
         <div class="progres-text" id="progresText"></div>
 
         <div class="barra">
@@ -311,13 +337,10 @@
           <button class="resposta" onclick="respondre(4)">4 · Sovint</button>
           <button class="resposta" onclick="respondre(5)">5 · Sempre</button>
         </div>
-
       </div>
 
-
       <!-- RESULTATS -->
-      <div id="resultats" class="amagat">
-
+      <div id="resultats" class="amagat bloc">
         <div class="centrat">
           <div class="etiqueta">El teu resultat</div>
           <h2>Resultats del qüestionari</h2>
@@ -327,7 +350,7 @@
 
         <div class="bloc-puntuacio">
           <div class="fila-puntuacio">
-            <span>Preferència visual</span>
+            <span>Canal visual</span>
             <strong id="textVisual"></strong>
           </div>
           <div class="barra-resultat">
@@ -337,7 +360,7 @@
 
         <div class="bloc-puntuacio">
           <div class="fila-puntuacio">
-            <span>Preferència verbal</span>
+            <span>Canal verbal</span>
             <strong id="textVerbal"></strong>
           </div>
           <div class="barra-resultat">
@@ -347,7 +370,7 @@
 
         <div class="bloc-puntuacio">
           <div class="fila-puntuacio">
-            <span>Preferència pràctica</span>
+            <span>Canal cinestèsic / pràctic</span>
             <strong id="textPractica"></strong>
           </div>
           <div class="barra-resultat">
@@ -355,84 +378,209 @@
           </div>
         </div>
 
+        <div class="recomanacions">
+          <h3>Recomanacions per a tu</h3>
+          <div id="textRecomanacions"></div>
         </div>
 
         <div class="botons-final">
           <button onclick="reiniciarTest()">Torna a fer el test</button>
           <button class="secundari" onclick="tornarInici()">Torna a l'inici</button>
         </div>
-
       </div>
 
     </section>
-
   </main>
 
-
   <script>
-
     const preguntes = [
       {
-        text: "Quan estudio, m'ajuda organitzar la informació en esquemes, taules o mapes conceptuals.",
+        text: "Quan estudio, m’ajuda organitzar la informació en esquemes, taules o mapes conceptuals.",
         tipus: "visual"
       },
       {
-        text: "Els gràfics, dibuixos o representacions visuals m'ajuden a comprendre continguts difícils.",
+        text: "Els gràfics, dibuixos o representacions visuals m’ajuden a entendre millor els continguts.",
         tipus: "visual"
       },
       {
-        text: "Quan intento recordar uns apunts, em resulta útil pensar en com estava organitzada visualment la informació.",
+        text: "Utilitzo colors, subratllats o fletxes per relacionar conceptes.",
         tipus: "visual"
       },
       {
-        text: "Utilitzo colors, fletxes o altres elements visuals per relacionar conceptes.",
+        text: "Recordo millor la informació quan penso en com estava distribuïda als apunts.",
         tipus: "visual"
       },
       {
-        text: "Explicar amb les meves pròpies paraules allò que estudio m'ajuda a entendre-ho.",
+        text: "Explicar amb les meves paraules el que estudio m’ajuda a entendre-ho millor.",
         tipus: "verbal"
       },
       {
-        text: "Em resulta útil comentar amb una altra persona els continguts que estic estudiant.",
+        text: "Repetir la informació en veu alta m’ajuda a recordar-la.",
         tipus: "verbal"
       },
       {
-        text: "Repetir o explicar una idea en veu alta m'ajuda a recordar-la.",
+        text: "M’és útil comentar el temari amb una altra persona.",
         tipus: "verbal"
       },
       {
-        text: "Després d'estudiar un tema, intento explicar-lo sense mirar els apunts.",
+        text: "Després d’estudiar, intento explicar el tema sense mirar els apunts.",
         tipus: "verbal"
       },
       {
-        text: "Entenc millor un contingut quan puc aplicar-lo en exercicis o problemes.",
+        text: "Entenc millor un contingut quan el puc aplicar en exercicis o activitats.",
         tipus: "practica"
       },
       {
-        text: "Els exemples concrets m'ajuden a comprendre millor la teoria.",
+        text: "Els exemples concrets m’ajuden a comprendre millor la teoria.",
         tipus: "practica"
       },
       {
-        text: "Quan aprenc alguna cosa nova, intento relacionar-la amb situacions reals.",
+        text: "Prefereixo posar en pràctica un procediment abans que només llegir-lo.",
         tipus: "practica"
       },
       {
-        text: "Prefereixo practicar un procediment abans que limitar-me a llegir com es fa.",
+        text: "Relacionar el que aprenc amb situacions reals m’ajuda a retenir-ho millor.",
         tipus: "practica"
-      },
-      {
-        text: "Em faig preguntes o intento recordar la informació sense mirar els apunts.",
-        tipus: "recuperacio"
-      },
-      {
-        text: "Acostumo a repartir l'estudi d'un examen entre diversos dies.",
-        tipus: "distribucio"
-      },
-      {
-        text: "Quan estudio, intento relacionar la informació nova amb coses que ja sé.",
-        tipus: "elaboracio"
-    
-  </script>
+      }
+    ];
 
+    let preguntaActual = 0;
+    let punts = {
+      visual: 0,
+      verbal: 0,
+      practica: 0
+    };
+
+    function comencarTest() {
+      document.getElementById("inici").classList.add("amagat");
+      document.getElementById("resultats").classList.add("amagat");
+      document.getElementById("test").classList.remove("amagat");
+
+      preguntaActual = 0;
+      punts = { visual: 0, verbal: 0, practica: 0 };
+
+      mostrarPregunta();
+    }
+
+    function mostrarPregunta() {
+      const pregunta = preguntes[preguntaActual];
+      document.getElementById("textPregunta").textContent = pregunta.text;
+      document.getElementById("progresText").textContent =
+        `Pregunta ${preguntaActual + 1} de ${preguntes.length}`;
+
+      const percentatge = ((preguntaActual) / preguntes.length) * 100;
+      document.getElementById("barraProgres").style.width = percentatge + "%";
+    }
+
+    function respondre(valor) {
+      const tipus = preguntes[preguntaActual].tipus;
+      punts[tipus] += valor;
+
+      preguntaActual++;
+
+      if (preguntaActual < preguntes.length) {
+        mostrarPregunta();
+      } else {
+        mostrarResultats();
+      }
+    }
+
+    function mostrarResultats() {
+      document.getElementById("test").classList.add("amagat");
+      document.getElementById("resultats").classList.remove("amagat");
+      document.getElementById("barraProgres").style.width = "100%";
+
+      const maxPerCanal = 20;
+
+      const visualPct = Math.round((punts.visual / maxPerCanal) * 100);
+      const verbalPct = Math.round((punts.verbal / maxPerCanal) * 100);
+      const practicaPct = Math.round((punts.practica / maxPerCanal) * 100);
+
+      document.getElementById("textVisual").textContent = visualPct + "%";
+      document.getElementById("textVerbal").textContent = verbalPct + "%";
+      document.getElementById("textPractica").textContent = practicaPct + "%";
+
+      document.getElementById("barraVisual").style.width = visualPct + "%";
+      document.getElementById("barraVerbal").style.width = verbalPct + "%";
+      document.getElementById("barraPractica").style.width = practicaPct + "%";
+
+      let canal = "visual";
+      let puntuacioMax = punts.visual;
+
+      if (punts.verbal > puntuacioMax) {
+        canal = "verbal";
+        puntuacioMax = punts.verbal;
+      }
+
+      if (punts.practica > puntuacioMax) {
+        canal = "practica";
+        puntuacioMax = punts.practica;
+      }
+
+      let missatge = "";
+      let recomanacions = "";
+
+      if (canal === "visual") {
+        missatge = `
+          El teu canal de processament predominant és <strong>el visual</strong>.<br>
+          Això indica que tendeixes a entendre i recordar millor la informació quan està representada de manera gràfica o estructurada.
+        `;
+
+        recomanacions = `
+          <ul>
+            <li><strong>Codificació dual:</strong> combina paraules amb esquemes, dibuixos o fletxes.</li>
+            <li><strong>Sketchnotes:</strong> pren apunts visuals amb paraules clau i petits símbols.</li>
+            <li><strong>Mapes conceptuals:</strong> organitza les idees principals de manera jeràrquica.</li>
+            <li><strong>Regla dels dos colors:</strong> utilitza només dos colors per destacar idees importants i relacions.</li>
+          </ul>
+        `;
+      } else if (canal === "verbal") {
+        missatge = `
+          El teu canal de processament predominant és <strong>el verbal</strong>.<br>
+          Això significa que t’ajuda especialment explicar, repetir i expressar amb paraules allò que aprens.
+        `;
+
+        recomanacions = `
+          <ul>
+            <li><strong>Tècnica Feynman:</strong> explica un concepte com si l’haguessis d’ensenyar a algú.</li>
+            <li><strong>Blurting:</strong> estudia un tema i després escriu o explica tot el que recordis sense mirar els apunts.</li>
+            <li><strong>Autoexplicació:</strong> comenta en veu alta què estàs fent i per què.</li>
+            <li><strong>Preguntes de recuperació:</strong> formula’t preguntes i intenta respondre-les sense ajuda.</li>
+          </ul>
+        `;
+      } else {
+        missatge = `
+          El teu canal de processament predominant és <strong>el cinestèsic o pràctic</strong>.<br>
+          Això vol dir que tendeixes a comprendre millor quan poses en pràctica els continguts o els relaciones amb situacions reals.
+        `;
+
+        recomanacions = `
+          <ul>
+            <li><strong>Pràctica intercalada:</strong> combina exercicis diferents en lloc de repetir sempre el mateix tipus.</li>
+            <li><strong>Quadern d’errors:</strong> anota els errors que comets i revisa per què han passat.</li>
+            <li><strong>Aprenentatge amb exemples:</strong> transforma la teoria en casos concrets o situacions reals.</li>
+            <li><strong>Simulació activa:</strong> practica com si fessis l’examen o resolguessis un problema real.</li>
+          </ul>
+        `;
+      }
+
+      document.getElementById("resultatPrincipal").innerHTML = missatge;
+      document.getElementById("textRecomanacions").innerHTML = recomanacions;
+    }
+
+    function reiniciarTest() {
+      comencarTest();
+    }
+
+    function tornarInici() {
+      document.getElementById("test").classList.add("amagat");
+      document.getElementById("resultats").classList.add("amagat");
+      document.getElementById("inici").classList.remove("amagat");
+
+      preguntaActual = 0;
+      punts = { visual: 0, verbal: 0, practica: 0 };
+      document.getElementById("barraProgres").style.width = "0%";
+    }
+  </script>
 </body>
 </html>
